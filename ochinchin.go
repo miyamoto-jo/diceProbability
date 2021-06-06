@@ -41,6 +41,7 @@ func setDice(num int) [][]string {
 // サイコロを振った時 "お", "ち", "ん", "ち", "ん" になるのが何パターンあるかチェック
 func ochinchinPatternCheck(dl [][]string) int {
 	cnt := 0
+	// TODO: 実装がよくない。サイコロの数によって動的に入れ子loop処理を生成すべき
 	for i0 := 0; i0 < len(dl[0]); i0++ {
 		one := dl[0][i0]
 		for i1 := 0; i1 < len(dl[1]); i1++ {
